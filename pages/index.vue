@@ -411,7 +411,7 @@
           </div>
           <div class="col-md-4">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Є запитання?</h2>
+              <h2 class="ftco-heading-2">Контакти</h2>
               <div class="block-23 mb-3">
                 <ul>
                   <li><span class="icon icon-map-marker"></span><span class="text">м. Луцьк, проспект Волі 21</span>
