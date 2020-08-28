@@ -735,6 +735,15 @@ export default {
     return {
       date: new Date().getFullYear()
     }
+  },
+
+  mounted () {
+    if (window.XXX) {
+      window.XXX();
+      console.log('window.XXX();');
+    } else {
+      console.log('NONOO')
+    }
   }
 }
 </script>

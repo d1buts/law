@@ -1,4 +1,4 @@
-window.onload = function(event) {
+window.XXX = function(event) {
   AOS.init({
     duration: 800,
     easing: 'slide'
@@ -6,7 +6,6 @@ window.onload = function(event) {
 
   (function ($) {
     'use strict'
-    console.log('!!!!!!!test')
     var isMobile = {
       Android () {
         return navigator.userAgent.match(/Android/i)
@@ -54,7 +53,6 @@ window.onload = function(event) {
       }, 1)
     }
     loader()
-    console.log('!!!!!!!test 2')
     // Scrollax
     $.Scrollax()
 
@@ -189,7 +187,6 @@ window.onload = function(event) {
     const contentWayPoint = function () {
       let i = 0
       $('.ftco-animate').waypoint(function (direction) {
-        console.log('!!!!!!!!!!QAQAQAQ')
         if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
           i++
 
