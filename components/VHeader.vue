@@ -24,15 +24,16 @@
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <a href="/" @click.prevent="onClickContacts" class="nav-link">
-              Контакти
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="/" @click.prevent="onClickConsultation" class="nav-link">
               Консультація
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/" @click.prevent="onClickContacts" class="nav-link">
+              Контакти
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>
