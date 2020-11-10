@@ -28,6 +28,11 @@
               Контакти
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/" @click.prevent="onClickConsultation" class="nav-link">
+              Консультація
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -41,6 +46,10 @@ export default {
   name: 'VHeader',
 
   methods: {
+    onClickConsultation () {
+      scrollToBlock('consultation')
+    },
+
     onClickContacts () {
       scrollToBlock('contacts')
     }

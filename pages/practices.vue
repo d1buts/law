@@ -23,6 +23,9 @@
         </template>
       </div>
     </div>
+
+    <consultation />
+
     <v-footer />
 
     <!-- loader -->
@@ -40,6 +43,7 @@
 import VHeader from '@/components/VHeader'
 import VFooter from '@/components/VFooter'
 import runJquery from '@/lib/mixins/runJquery'
+import Consultation from '@/components/Consultation'
 import PRACTICIES from '@/assets/practicies'
 import scrollToBlock from '@/lib/scrollToBlock'
 
@@ -50,7 +54,8 @@ export default {
 
   components: {
     VHeader,
-    VFooter
+    VFooter,
+    Consultation
   },
 
   mixins: [runJquery],
