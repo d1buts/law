@@ -1,5 +1,5 @@
 <template>
-  <footer class="ftco-footer ftco-bg-dark ftco-section">
+  <footer id="contacts" class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-3">
@@ -17,14 +17,11 @@
           <div class="ftco-footer-widget mb-4 ml-md-5">
             <h2 class="ftco-heading-2">Практики</h2>
             <ul class="list-unstyled">
-              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Цивільні справи</a></li>
-              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Адміністративна відповідальность</a>
-              </li>
-              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Порушення митних правил</a>
-              </li>
-              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Корупційні адміністративні правопорушення</a>
-              </li>
-              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Кримінальні переслідування</a>
+              <li v-for="item in $options.PRACTICIES" :key="item.id">
+                <nuxt-link :to="practicyLink(item.id)" class="py-1 d-block">
+                  <span class="ion-ios-arrow-forward mr-3" />
+                  {{ item.title }}
+                </nuxt-link>
               </li>
             </ul>
           </div>
@@ -38,7 +35,8 @@
                 </li>
                 <li><a href="#"><span class="icon icon-phone"></span><span class="text">+380666004123</span></a>
                 </li>
-                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a>
+                <li><a href="#"><span class="icon icon-envelope"></span><span
+                  class="text">info@yourdomain.com</span></a>
                 </li>
               </ul>
             </div>
@@ -68,13 +66,26 @@
 </template>
 
 <script>
+import PRACTICIES from '@/assets/practicies'
+
 export default {
   name: 'VFooter',
 
-  data() {
+  PRACTICIES,
+
+  data () {
     return {
       date: new Date().getFullYear()
     }
   },
+
+  methods: {
+    practicyLink (id) {
+      return {
+        name:   'practices',
+        params: { id }
+      }
+    },
+  }
 }
 </script>

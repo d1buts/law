@@ -57,7 +57,7 @@
           <div class="col-md-6 d-flex">
             <div
               class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end">
-              <img src="images/person_2.jpg" alt="">
+              <img src="images/main/LAS.jpg" alt="">
             </div>
           </div>
           <div class="col-md-6 px-5 py-5">
@@ -102,7 +102,7 @@
           <div class="col-md-6 d-flex">
             <div
               class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end">
-              <img src="images/person_3.jpg" alt="">
+              <img src="images/main/GJA.jpg" alt="">
             </div>
           </div>
         </div>
@@ -118,50 +118,14 @@
           </div>
         </div>
         <div class="row no-gutters d-flex justify-content-center">
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
+          <div v-for="item in $options.PRACTICIES" :key="item.id" class="col-md-4 text-center">
+            <nuxt-link :to="practicyLink(item.id)" class="practice-area ftco-animate">
               <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-family"></span>
+                <span :class="item.iconClassAttr" />
               </div>
-              <h3>Цивільні справи</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-auction"></span>
-              </div>
-              <h3>Адміністративна відповідальность</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-shield"></span>
-              </div>
-              <h3>Порушення митних правил</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-money"></span>
-              </div>
-              <h3>Корупційні адміністративні правопорушення</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-handcuffs"></span>
-              </div>
-              <h3>Кримінальні переслідування</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.shortDescription }}</p>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -263,103 +227,6 @@
       </div>
     </section>
 
-    <section class="ftco-section testimony-section ftco-no-pt">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Відгуки</span>
-            <h2 class="mb-4">Щасливі клієнти</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <v-footer />
 
     <!-- loader -->
@@ -377,19 +244,28 @@
 <script>
 import VHeader from '@/components/VHeader'
 import VFooter from '@/components/VFooter'
+import runJquery from '@/lib/mixins/runJquery'
+import PRACTICIES from '@/assets/practicies'
 
 export default {
   name: 'PageIndex',
 
+  PRACTICIES,
+
   components: {
     VHeader,
-    VFooter,
+    VFooter
   },
 
-  mounted() {
-    if (window.XXX) {
-      window.XXX()
+  methods: {
+    practicyLink(id) {
+      return {
+        name: 'practices',
+        params: { id }
+      }
     }
-  }
+  },
+
+  mixins: [runJquery],
 }
 </script>
