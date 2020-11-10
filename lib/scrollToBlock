@@ -1,0 +1,12 @@
+export default function scrollToBlock (blockId, blockPosition = 'center') {
+  if (!process.client) {
+    return
+  }
+
+  const element = window[blockId]
+
+  element.scrollIntoView({
+    block:    blockPosition,
+    behavior: 'smooth'
+  })
+}

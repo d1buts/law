@@ -1,25 +1,6 @@
 <template>
   <div>
-    <nav class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div class="container-fluid px-md-5">
-        <a class="navbar-brand" href="index.html">Judge <span>A Law Firm</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav"
-                aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> Menu
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="#" class="nav-link">Про нас</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Практики</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Відгуки</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Контакти</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- END nav -->
+    <v-header />
 
     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');"
          data-stellar-background-ratio="0.5">
@@ -76,7 +57,7 @@
           <div class="col-md-6 d-flex">
             <div
               class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end">
-              <img src="images/person_2.jpg" alt="">
+              <img src="images/main/LAS.jpg" alt="">
             </div>
           </div>
           <div class="col-md-6 px-5 py-5">
@@ -121,7 +102,7 @@
           <div class="col-md-6 d-flex">
             <div
               class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end">
-              <img src="images/person_3.jpg" alt="">
+              <img src="images/main/GJA.jpg" alt="">
             </div>
           </div>
         </div>
@@ -137,50 +118,14 @@
           </div>
         </div>
         <div class="row no-gutters d-flex justify-content-center">
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
+          <div v-for="item in $options.PRACTICIES" :key="item.id" class="col-md-4 text-center">
+            <nuxt-link :to="practicyLink(item.id)" class="practice-area ftco-animate">
               <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-family"></span>
+                <span :class="item.iconClassAttr" />
               </div>
-              <h3>Цивільні справи</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-auction"></span>
-              </div>
-              <h3>Адміністративна відповідальность</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-shield"></span>
-              </div>
-              <h3>Порушення митних правил</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-money"></span>
-              </div>
-              <h3>Корупційні адміністративні правопорушення</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="practice-area ftco-animate">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-handcuffs"></span>
-              </div>
-              <h3>Кримінальні переслідування</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.shortDescription }}</p>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -282,169 +227,7 @@
       </div>
     </section>
 
-    <section class="ftco-section testimony-section ftco-no-pt">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Відгуки</span>
-            <h2 class="mb-4">Щасливі клієнти</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                      Consonantia,
-                      there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-3">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Про компанію</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-                blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Практики</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Цивільні справи</a></li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Адміністративна відповідальность</a>
-                </li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Порушення митних правил</a>
-                </li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Корупційні адміністративні правопорушення</a>
-                </li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Кримінальні переслідування</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Контакти</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li><span class="icon icon-map-marker"></span><span class="text">м. Луцьк, проспект Волі 21</span>
-                  </li>
-                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+380666004123</span></a>
-                  </li>
-                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="opening-hours">
-                <h4>Графік рботи:</h4>
-                <p class="pl-3">
-                  <span>Понеділок – п'ятниця : з 9.00 до 18.00</span>
-                  <span>Субота : з 9.00 до 16.00</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy; {{ date }}
-              All rights reserved | This template is made with <i class="icon-heart color-danger"
-                                                                  aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <v-footer />
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen">
@@ -459,23 +242,30 @@
 </template>
 
 <script>
+import VHeader from '@/components/VHeader'
+import VFooter from '@/components/VFooter'
+import runJquery from '@/lib/mixins/runJquery'
+import PRACTICIES from '@/assets/practicies'
+
 export default {
-  data() {
-    return {
-      date: new Date().getFullYear()
+  name: 'PageIndex',
+
+  PRACTICIES,
+
+  components: {
+    VHeader,
+    VFooter
+  },
+
+  methods: {
+    practicyLink(id) {
+      return {
+        name: 'practices',
+        params: { id }
+      }
     }
   },
 
-  mounted() {
-    if (window.XXX) {
-      window.XXX()
-      console.log('window.XXX();')
-    } else {
-      console.log('NONOO')
-    }
-  }
+  mixins: [runJquery],
 }
 </script>
-
-<style>
-</style>
