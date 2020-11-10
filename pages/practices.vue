@@ -4,10 +4,10 @@
 
     <div class="body">
       <div class="bg-container">
-        <h1>Практики</h1>
+<!--        <h1>Напрямки діяльності</h1>-->
       </div>
       <div class="container">
-        <h3 class="content__title">Практики</h3>
+        <h3 class="content__title text-uppercase">Сфера послуг</h3>
         <ol class="content">
           <li v-for="item in $options.PRACTICIES" :key="item.title" class="content__item">
             <span @click="onClickPracticy(item.id)">{{ item.title }}</span>

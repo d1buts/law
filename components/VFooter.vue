@@ -31,12 +31,20 @@
             <h2 class="ftco-heading-2">Контакти</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">м. Луцьк, проспект Волі 21</span>
+                <li>
+                  <span class="icon icon-map-marker"></span><span class="text">м. Луцьк, вулиця Шопена 22а</span>
                 </li>
-                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+380666004123</span></a>
+                <li>
+                  <a href="tel:+380505190047">
+                    <span class="icon icon-phone" />
+                    <span class="text">+380505190047</span>
+                  </a>
                 </li>
-                <li><a href="#"><span class="icon icon-envelope"></span><span
-                  class="text">info@yourdomain.com</span></a>
+                <li>
+                  <a href="mailto:ovspvo@ukr.net">
+                    <span class="icon icon-envelope" />
+                    <span class="text">ovspvo@ukr.net</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -44,7 +52,10 @@
               <h4>Графік рботи:</h4>
               <p class="pl-3">
                 <span>Понеділок – п'ятниця : з 9.00 до 18.00</span>
-                <span>Субота : з 9.00 до 16.00</span>
+                <br>
+                <span>Субота: за домовленістю</span>
+                <br>
+                <span>Неділя: за домовленістю</span>
               </p>
             </div>
           </div>

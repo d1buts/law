@@ -20,7 +20,7 @@
           </li>
           <li class="nav-item">
             <nuxt-link to="/practices" class="nav-link">
-              Практики
+              Напрямки діяльності
             </nuxt-link>
           </li>
           <li class="nav-item">

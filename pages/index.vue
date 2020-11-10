@@ -9,8 +9,8 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
              data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h2 class="subheading">Адвокат в Луцьку</h2>
-            <h1 class="mb-4">Кваліфікована юридична допомога</h1>
+<!--            <h2 class="subheading">Юридична компанія</h2>-->
+            <h1 class="mb-4">Юридична компанія</h1>
           </div>
         </div>
       </div>
@@ -124,7 +124,6 @@
                 <span :class="item.iconClassAttr" />
               </div>
               <h3>{{ item.title }}</h3>
-              <p>{{ item.shortDescription }}</p>
             </nuxt-link>
           </div>
         </div>
@@ -132,73 +131,6 @@
     </section>
 
     <consultation />
-
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-10 text-center heading-section ftco-animate">
-            <span class="subheading">Приклади справ</span>
-            <h2 class="mb-4">500+ Успішно завершених справ</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="case img d-flex align-items-center justify-content-center"
-                 style="background-image: url(images/case-1.jpg);">
-              <div class="text text-center">
-                <h3><a href="#">Legal Seperation</a></h3>
-                <span>Corporate</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="case img d-flex align-items-center justify-content-center"
-                 style="background-image: url(images/case-2.jpg);">
-              <div class="text text-center">
-                <h3><a href="#">Legal Seperation</a></h3>
-                <span>Corporate</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="case img d-flex align-items-center justify-content-center"
-                 style="background-image: url(images/case-3.jpg);">
-              <div class="text text-center">
-                <h3><a href="#">Legal Seperation</a></h3>
-                <span>Corporate</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="case img d-flex align-items-center justify-content-center"
-                 style="background-image: url(images/case-4.jpg);">
-              <div class="text text-center">
-                <h3><a href="#">Legal Seperation</a></h3>
-                <span>Corporate</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="case img d-flex align-items-center justify-content-center"
-                 style="background-image: url(images/case-5.jpg);">
-              <div class="text text-center">
-                <h3><a href="#">Legal Seperation</a></h3>
-                <span>Corporate</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="case img d-flex align-items-center justify-content-center"
-                 style="background-image: url(images/case-6.jpg);">
-              <div class="text text-center">
-                <h3><a href="#">Legal Seperation</a></h3>
-                <span>Corporate</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <v-footer />
 
