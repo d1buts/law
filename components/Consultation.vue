@@ -7,16 +7,13 @@
           <span class="subheading">Звяжіться прямо зараз!</span>
           <h2 class="mb-4">Запис на консультацію</h2>
           <form action="#" class="consultation">
-            <div class="form-group">
-              <label class="form-label">Ваше ім'я *</label>
+            <div class="form-group">              
               <input type="text" class="form-control" placeholder="Іван">
             </div>
-            <div class="form-group">
-              <label class="form-label">Ваш номер телефону *</label>
+            <div class="form-group">              
               <input type="text" class="form-control" placeholder="0991234567">
             </div>
-            <div class="form-group">
-              <label class="form-label">Тема повідомлення</label>
+            <div class="form-group">              
               <input type="text" class="form-control" placeholder="Супровід бізнесу ...">
             </div>
             <div class="form-group">              
