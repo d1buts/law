@@ -1,9 +1,9 @@
 <template>
-  <section id="consultation" class="ftco-consultation ftco-section img" style="background-image: url(images/bg_2.jpg);">
+  <section id="consultation" class="ftco-consultation ftco-section img" style="background: url(images/bg_2.jpg) no-repeat; background-size: cover; ">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container-lg">
       <div class="row d-md-flex justify-content-end form__wrapper">
-        <div class="col-md-6 half p-3 p-md-5 ftco-animate heading-section">
+        <div class="col-sm-8 col-md-6 half px-4 px-md-5 ftco-animate heading-section">
           <span v-if="form.submitStatus !== 'OK'" class="subheading">Звяжіться прямо зараз!</span>
           <h2 v-if="form.submitStatus !== 'OK'" class="mb-4">Запис на консультацію</h2>
 
@@ -142,7 +142,7 @@ export default {
 
 
 .form__wrapper {
-  min-height: 784px;
+  min-height: 670px;
 }
 
 .form-group {

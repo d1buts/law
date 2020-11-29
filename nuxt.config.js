@@ -58,6 +58,10 @@ export default {
       },
       {
         rel: 'stylesheet',
+        href: '/css/bootstrap/bootstrap-grid.css'
+      },
+      {
+        rel: 'stylesheet',
         href: '/css/style.css'
       }
     ],
