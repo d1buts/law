@@ -176,3 +176,41 @@ export default {
   mixins: [runJquery],
 }
 </script>
+
+<style lang="scss" scoped>
+
+a.practice-area {
+  position: relative;  
+
+  &::before, &::after {
+    content: '';
+    position: absolute;    
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    transition: .5s;        
+  }
+
+  &::before {
+    border-top: 2px solid #83b582;
+    border-bottom: 2px solid #83b582;
+    transform: scaleX(0);    
+  }
+
+  &::after {
+    border-left: 2px solid #83b582;
+    border-right: 2px solid #83b582;
+    transform: scaleY(0);
+  }
+
+  &:hover {
+    div {
+      transform: scale(1.2);
+    }
+    &::before, &::after {
+      transform: scale(1);
+    }
+  }
+}
+</style>
