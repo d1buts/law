@@ -7,21 +7,20 @@
           <span class="subheading">Звяжіться прямо зараз!</span>
           <h2 class="mb-4">Запис на консультацію</h2>
           <form action="#" class="consultation">
-            <div class="form-group">              
-              <input type="text" class="form-control" placeholder="Іван">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Ваше ім'я">
             </div>
-            <div class="form-group">              
-              <input type="text" class="form-control" placeholder="0991234567">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Телефон">
             </div>
-            <div class="form-group">              
-              <input type="text" class="form-control" placeholder="Супровід бізнесу ...">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Тема">
             </div>
-            <div class="form-group">              
-              <label class="form-label">Повідомлення</label>
+            <div class="form-group">
               <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Повідомлення" />
             </div>
             <div class="form-group">
-              <input type="submit" value="Відправити" class="btn btn-primary py-3 px-4">
+              <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
             </div>
           </form>
         </div>
