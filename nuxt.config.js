@@ -93,8 +93,8 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [    
-    {src: '~/plugins/vuelidate.js', mode: 'client'}
+  plugins: [
+    { src: '~/plugins/vuelidate.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
