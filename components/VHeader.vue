@@ -8,7 +8,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
               aria-controls="ftco-nav"
               aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
+        <span class="oi oi-menu"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="ftco-nav">
@@ -63,11 +63,13 @@ export default {
   width: 220px;
 }
 
+
 .logo.white {
   width: 180px;
 }
 
 .logo.dark {
+  width: 180px;
   display: none;
 }
 
@@ -80,5 +82,10 @@ export default {
 
 .ftco-navbar-light.scrolled .logo.dark {
   display: block;
+}
+
+.oi {
+  font-size: 30px;
+  font-weight: 800;
 }
 </style>

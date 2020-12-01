@@ -8,9 +8,9 @@
       <div class="container-fluid px-md-5">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
              data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate">
+          <div class="col ftco-animate">
 <!--            <h2 class="subheading">Юридична компанія</h2>-->
-            <h1 class="mb-4">Юридична компанія</h1>
+            <h1 class="mb-4 intro-title">Юридична компанія</h1>
           </div>
         </div>
       </div>
@@ -19,28 +19,28 @@
     <section class="ftco-section ftco-no-pb ftco-no-pt services-section">
       <div class="container-fluid px-md-5 py-3">
         <div class="row py-4 d-flex">
-          <div class="col-md-3 services align-self-stretch ftco-animate">
+          <div class="col-md-3 text-center services align-self-stretch ftco-animate">
             <div class="media-body">
               <span class="num">01</span>
               <h3 class="heading mb-3"><a href="#">Отримайте юридичну консультацію</a></h3>
               <p>Far far away, behind the word mountains, far from the countries</p>
             </div>
           </div>
-          <div class="col-md-3 services align-self-stretch ftco-animate">
+          <div class="col-md-3 text-center services align-self-stretch ftco-animate">
             <div class="media-body">
               <span class="num">02</span>
               <h3 class="heading mb-3"><a href="#">Супровід бізнесу</a></h3>
               <p>Far far away, behind the word mountains, far from the countries</p>
             </div>
           </div>
-          <div class="col-md-3 services align-self-stretch ftco-animate">
+          <div class="col-md-3 text-center services align-self-stretch ftco-animate">
             <div class="media-body">
               <span class="num">03</span>
               <h3 class="heading mb-3"><a href="#">Помірна ціни за послуги</a></h3>
               <p>Far far away, behind the word mountains, far from the countries</p>
             </div>
           </div>
-          <div class="col-md-3 services align-self-stretch ftco-animate">
+          <div class="col-md-3 text-center services align-self-stretch ftco-animate">
             <div class="media-body">
               <span class="num">04</span>
               <h3 class="heading mb-3"><a href="#">Експертиза в документах справи</a></h3>
@@ -54,13 +54,13 @@
     <section class="ftco-section ftco-no-pt">
       <div class="container">
         <div class="row d-flex">
-          <div class="col-md-6 d-flex">
+          <div class="col-sm-6 d-flex">
             <div
-              class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end">
+              class="img d-flex  align-items-start justify-content-center justify-content-md-center pt-5">
               <img src="images/main/LAS.jpg" alt="">
             </div>
           </div>
-          <div class="col-md-6 px-5 py-5">
+          <div class="col-sm-6 p-3 px-md-5 py-4">
             <div class="row justify-content-start pt-3 pb-3">
               <div class="col-md-12 heading-section ftco-animate">
                 <span class="subheading">Партнер. Адвокат</span>
@@ -83,7 +83,7 @@
     <section class="ftco-section ftco-no-pt ftco-no-pb">
       <div class="container">
         <div class="row d-flex">
-          <div class="col-md-6 px-5 py-5">
+          <div class="col-sm-6 p-3 px-md-5 py-4">
             <div class="row justify-content-start pt-3 pb-3">
               <div class="col-md-12 heading-section ftco-animate">
                 <span class="subheading">Партнер. Адвокат</span>
@@ -99,9 +99,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 d-flex">
+          <div class="col-sm-6 d-flex">
             <div
-              class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end">
+              class="img d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end pt-5">
               <img src="images/main/GJA.jpg" alt="">
             </div>
           </div>
@@ -178,7 +178,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@media (max-width: 576px) {
+  h1.intro-title {
+    text-align: center;
+  }
+}
 a.practice-area {
   position: relative;  
 
@@ -213,4 +217,13 @@ a.practice-area {
     }
   }
 }
+
+.media-body {
+  transition: .2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 </style>
