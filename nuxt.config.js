@@ -58,6 +58,10 @@ export default {
       },
       {
         rel: 'stylesheet',
+        href: '/css/bootstrap/bootstrap-grid.css'
+      },
+      {
+        rel: 'stylesheet',
         href: '/css/style.css'
       }
     ],
@@ -89,7 +93,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [    
+    {src: '~/plugins/vuelidate.js', mode: 'client'}
+  ],
   /*
    ** Nuxt.js dev-modules
    */
