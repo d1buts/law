@@ -16,12 +16,16 @@
               class="form-group" 
               :class="{ 'form-group--error': $v.form.name.$invalid && form.submitStatus === 'ERROR' }">
 
-              <label class="form-label" >
+              <label 
+                class="form-label"
+                for="userName" >
                Ваше ім'я *
               </label>
 
               <input 
                 type="text"
+                id="userName"
+                name="name"
                 v-model.trim='$v.form.name.$model'
                 class="form-control"
                 placeholder="Введіть ваше ім'я"
@@ -44,13 +48,20 @@
               :class="{ 'form-group--error': $v.form.phoneNumber.$invalid && form.submitStatus === 'ERROR' }"
             >
 
-              <label class="form-label">Ваш номер телефону *</label>
+              <label 
+                class="form-label"
+                for="phoneNumber"
+              >
+                Ваш номер телефону *
+              </label>
               <input 
+                id="phoneNumber"
+                name="phoneNumber"
                 type="text" 
                 v-model.trim='$v.form.phoneNumber.$model'
                 class="form-control" 
                 placeholder="0991234567"
-              >
+              >              
 
               <div class="error" v-if="!$v.form.phoneNumber.required && form.submitStatus === 'ERROR'">Номер телефону є обов'язковим полем</div>
               <div class="error" v-if="!$v.form.phoneNumber.numeric && form.submitStatus === 'ERROR'">Номер телефона може містити тільки цифри</div>
@@ -61,13 +72,39 @@
             <!-- PHONE NUMBER END -->
 
             <div class="form-group">
-              <label class="form-label">Тема повідомлення</label>
-              <input type="text" class="form-control" placeholder="Супровід бізнесу ...">
+              <label 
+              class="form-label"
+              for="userTheme"
+              >
+              Тема повідомлення
+              </label>
+
+              <input
+                id="userTheme"
+                name="theme"
+                v-model.trim="form.theme" 
+                type="text" 
+                class="form-control" 
+                placeholder="Супровід бізнесу ..."
+              >
             </div>
 
             <div class="form-group form-group_text-area">              
-              <label class="form-label">Повідомлення</label>
-              <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Повідомлення" />
+              <label 
+                for="userMessage" 
+                class="form-label">
+                Повідомлення
+              </label>
+
+              <textarea               
+                id="userMessage"
+                name="message"
+                v-model.trim="form.message" 
+                cols="30" 
+                rows="5" 
+                class="form-control" 
+                placeholder="Повідомлення"
+              />
             </div>
 
             <div class="form-group">
@@ -86,7 +123,8 @@
 </template>
 
 <script>
-import { required, minLength, maxLength, numeric } from 'vuelidate/lib/validators'
+import { required, minLength, maxLength, numeric } from 'vuelidate/lib/validators';
+import emailjs from 'emailjs-com';
 
 export default {
   name: 'Consultation',
@@ -95,6 +133,8 @@ export default {
       form: {
         name: '',
         phoneNumber: '',
+        theme: '',
+        message: '',
         submitStatus: null,
         submitValue: 'Віправити'
       }
@@ -113,25 +153,25 @@ export default {
         minLength: minLength(10),
         maxLength: maxLength(10)
       }
-    }    
-    
-    // phoneNumber: {
-    //   required,
-    //   minLength: minLength(10)
-    // }
+    }  
   },
   methods: {    
-    submit() {
+    submit(e) {
       this.$v.form.$touch()
       if (this.$v.form.$invalid) {
         this.form.submitStatus = 'ERROR'
       } else {
         // do your submit logic here
         this.form.submitStatus = 'PENDING'
-        this.form.submitValue = 'Відправлення...'     
-        setTimeout(() => {
-          this.form.submitStatus = 'OK'
-        }, 2000)
+        this.form.submitValue = 'Відправлення...' 
+       
+        emailjs.sendForm('contact_form_law', 'template_xi12vxh', e.target, 'user_i9VTgo515fEWcQXSds6Ou')
+          .then((result) => {
+              console.log('SUCCESS!', result.status, result.text);
+              this.form.submitStatus = "OK"
+          }, (error) => {
+              console.log('FAILED...', error);
+          });        
       }
     }
   },  
